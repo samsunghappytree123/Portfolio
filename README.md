@@ -7,7 +7,11 @@
 
 > 라이센스를 꼭 지켜주세요. [라이센스 확인](/LICENSE)
 
+> [사이트 바로가기](https://dev-happytree.ga)
+
 ## English (영어)
 > This is Fort Plio from Happytree Samsung.
 
 > Please keep your license. [License Confirmation](/LICENSE)
+
+> [Site Shortcuts](https://dev-happytree.ga)
