@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
+@font-face { font-family: 'Cafe24Oneprettynight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff'); font-weight: normal; font-style: normal; } 
+
 body {
-font-family: 'Jua', sans-serif;
+  font-family: 'Cafe24Oneprettynight', sans-serif;
 }
+
 img {
     max-width: 100%;
+}
+
+.div .copyright {
+    font-family: 'Jua', sans-serif;
 }
