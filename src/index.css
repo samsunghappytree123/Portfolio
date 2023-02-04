@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url('fonts/Pretendard-SemiBold.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  padding-top: 60px;
+  font-family: Pretendard-SemiBold;
+  background-color: #0D1117;
+  color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #161B22;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav_logo {
+  padding-left: 2%;
+  padding-right: 0.5%;
+}
+
+.nav_logo img {
+  display:block;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav_menu li {
+  padding: 10%;
+}
+
+.nav_menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav_menu a:hover {
+  color: #B1B5B0;
+}
