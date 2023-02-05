@@ -3,12 +3,25 @@
   src: url('fonts/Pretendard-SemiBold.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'TossFaceFont';
+  src: url('fonts/TossFaceFont.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   padding-top: 60px;
-  font-family: Pretendard-SemiBold;
+  font-family: Pretendard-SemiBold, TossFaceFont;
   background-color: #0D1117;
   color: #fff;
+}
+
+img {
+  display:block;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
 }
 
 code {
@@ -55,4 +68,61 @@ code {
 
 .nav_menu a:hover {
   color: #B1B5B0;
+}
+
+.user_profile {
+  max-width: 1220px;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.user_profile_image {
+  width: 30%;
+  float: left;
+  text-align: left;
+}
+
+.user_profile_overview {
+  width: 70%;
+  float: right;
+}
+
+@media ( max-width: 768px ) { /* 모바일 */
+  .user_profile {
+    text-align: center;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .user_profile_image {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .user_profile_image img {
+    width: 80px;
+    height: 80px;
+    float: left;
+  }
+
+  .user_profile_image h2,
+  .user_profile_image p {
+    width: 70%;
+    float: right;
+    text-align: left;
+    margin-top: -1%;
+  }
+
+  .user_profile_overview {
+    width: 100%;
+  }
+  
 }
