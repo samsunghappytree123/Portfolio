@@ -29,6 +29,12 @@ code {
     monospace;
 }
 
+hr {
+  background-color: #30363D;
+  height:1px;
+  border:0;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -88,8 +94,15 @@ code {
 }
 
 .user_profile_overview {
-  width: 70%;
+  width: 65%;
   float: right;
+  border: solid 2px #30363D;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.user_profile_overview > .text {
+  margin: 20px 20px 20px 20px;
 }
 
 @media ( max-width: 768px ) { /* 모바일 */
