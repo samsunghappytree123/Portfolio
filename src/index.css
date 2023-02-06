@@ -99,6 +99,7 @@ hr {
   border: solid 2px #30363D;
   border-radius: 20px;
   text-align: left;
+  margin-bottom: 10px;
 }
 
 .user_profile_overview > .text {

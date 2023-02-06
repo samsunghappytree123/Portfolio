@@ -25,10 +25,9 @@ const Index = () => {
 
                         <h2>## 나만의 깃허브 잔디밭</h2>
                         <hr style={{marginTop: '-10px'}} />
-                        <img src="https://ghchart.rshah.org/samsunghappytree123" alt='github_commit_graph' width="100%" height="auto" /><br />
-                        <img src='https://github-readme-stats.vercel.app/api?username=samsunghappytree123&show_icons=true&theme=transparent' alt='github_stats' width="50%" height="auto" />
-                        {/* <img style={{float: 'left'}} src='https://github-readme-stats.vercel.app/api?username=samsunghappytree123&show_icons=true&theme=transparent' alt='github_stats' width="50%" height="auto" /> */}
-                        {/* <img style={{float: 'right'}} src='https://github-readme-stats.vercel.app/api/top-langs/?username=samsunghappytree123&show_icons=true&theme=transparent&langs_count=4' alt='github_stats' width="50%" height="auto" /> */}
+                        <img style={{marginBottom: '10px'}} src="https://ghchart.rshah.org/samsunghappytree123" alt='github_commit_graph' width="100%" height="auto" />
+                        <img style={{marginBottom: '10px'}} src='https://github-readme-stats.vercel.app/api?username=samsunghappytree123&show_icons=true&theme=transparent' alt='github_stats' />
+                        <img style={{marginBottom: '10px'}} src='https://github-readme-stats.vercel.app/api/top-langs/?username=samsunghappytree123&show_icons=true&theme=transparent&langs_count=4&layout=compact' alt='github_stats' height="auto" />
 
                         <p>➡ 저에 대한 더 자세한 정보는 아래의 레포지토리 목록을 확인해주세요!</p>
                     </div>
