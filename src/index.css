@@ -88,13 +88,13 @@ hr {
 }
 
 .user_profile_image {
-  width: 30%;
+  width: 25%;
   float: left;
   text-align: left;
 }
 
 .user_profile_overview {
-  width: 65%;
+  width: 70%;
   float: right;
   border: solid 2px #30363D;
   border-radius: 20px;
@@ -137,6 +137,10 @@ hr {
 
   .user_profile_overview {
     width: 100%;
+  }
+
+  .user_profile_links {
+    display: none;
   }
   
 }
