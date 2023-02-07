@@ -1,15 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 const Index = () => {
     return (
         <>
             <div className='user_profile'>
                 <div className='user_profile_image'>
-                    <img src='/favicon-192x192.png' alt='logo' width='296px' height='296px' style={{borderRadius: '50%'}}/>
+                    <img src='/favicon-192x192.png' alt='logo' width='296px' height='296px' style={{borderRadius: '50%', marginBottom: '10px'}}/>
                     <div>
                         <h2>Yunseo Jeong</h2>
                         <p style={{color: '#B1B5B0', marginTop: '-15px'}}>samsunghappytree123</p>
                         <p>👋 Hello, World!</p>
+                        <div className='user_profile_links'>
+                            <hr />
+                            <p style={{marginBottom: '-10px'}}><FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:samsunghappytree123@naver.com" rel="noreferrer" target="_blank">samsunghappytree123@naver.com</a></p>
+                            <p style={{marginBottom: '-10px'}}><FontAwesomeIcon icon={faInstagram} /> <a href="https://instagram.com/ysj0418" rel="noreferrer" target="_blank">@ysj0418</a></p>
+                            <p style={{marginBottom: '-10px'}}><FontAwesomeIcon icon={faPlus} /> <Link to="/repos">레포지토리 페이지 참고</Link></p>
+                        </div>
                     </div>
                 </div>
                 <div className='user_profile_overview' id="overview">

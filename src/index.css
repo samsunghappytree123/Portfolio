@@ -93,6 +93,21 @@ hr {
   text-align: left;
 }
 
+.user_profile_links p {
+  word-break:break-all;
+}
+
+.user_profile_links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.user_profile_links a:hover {
+  color: #B1B5B0;
+  text-decoration: underline;
+  text-decoration-color: #B1B5B0;
+}
+
 .user_profile_overview {
   width: 70%;
   float: right;
