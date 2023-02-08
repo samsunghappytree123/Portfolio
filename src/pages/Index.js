@@ -18,7 +18,7 @@ const Index = () => {
                             <hr />
                             <p style={{marginBottom: '-10px'}}><FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:samsunghappytree123@naver.com" rel="noreferrer" target="_blank">samsunghappytree123@naver.com</a></p>
                             <p style={{marginBottom: '-10px'}}><FontAwesomeIcon icon={faInstagram} /> <a href="https://instagram.com/ysj0418" rel="noreferrer" target="_blank">@ysj0418</a></p>
-                            <p style={{marginBottom: '-10px'}}><FontAwesomeIcon icon={faPlus} /> <Link to="/repos">레포지토리 페이지 참고</Link></p>
+                            <p style={{marginBottom: '-10px'}}><FontAwesomeIcon icon={faPlus} /> <Link to="/repositories">레포지토리 페이지 참고</Link></p>
                         </div>
                     </div>
                 </div>
