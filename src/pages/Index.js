@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPlus, faThumbTack, faBook } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 const Index = () => {
@@ -40,6 +40,36 @@ const Index = () => {
                         <img style={{marginBottom: '10px'}} src='https://github-readme-stats.vercel.app/api/top-langs/?username=samsunghappytree123&show_icons=true&theme=transparent&langs_count=4&layout=compact' alt='github_stats' height="auto" />
 
                         <p>➡ 저에 대한 더 자세한 정보는 아래의 레포지토리 목록을 확인해주세요!</p>
+                    </div>
+                </div>
+                <div className='user_profile_pin_repos' id="pin_repos">
+                    <h2><FontAwesomeIcon icon={faThumbTack} /> 고정된 레포지토리 목록</h2>
+                    <div className='repo_list'>
+                        <div className='user_profile_repo urp_left'>
+                            <div className='text'>
+                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/about">About</Link></p>
+                                <p className='repo_text'>🚀 안녕하세요, 삼해트입니다. 제 소개를 확인해보세요!</p>
+                            </div>
+                        </div>
+                        <div className='user_profile_repo urp_right'>
+                            <div className='text'>
+                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/projects">Projects</Link></p>
+                                <p className='repo_text'>🔧 제가 운영했던 프로젝트 목록을 소개합니다!</p>
+                            </div>
+                        </div>
+                        <div className='user_profile_repo urp_left'>
+                            <div className='text'>
+                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/ability-and-goal">Ability-and-Goal</Link></p>
+                                <p className='repo_text'>🥇 저의 능력과 앞으로의 목표에 대해 작성했습니다!</p>
+                            </div>
+                        </div>
+                        <div className='user_profile_repo urp_right'>
+                            <div className='text'>
+                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/contact">Contact</Link></p>
+                                <p className='repo_text'>📬 저와 연락할 수 있는 방법입니다! 편하게 연락주세요 :)</p>
+                            </div>
+                        </div>
+                        <p style={{textAlign: 'center'}}>더 많은 레포지토리는 <Link to="/repos">레포지토리 페이지</Link>에서 확인하세요!</p>
                     </div>
                 </div>
             </div>

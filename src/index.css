@@ -29,6 +29,15 @@ code {
     monospace;
 }
 
+a {
+  color: #58A6FF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 hr {
   background-color: #30363D;
   height:1px;
@@ -112,13 +121,52 @@ hr {
   width: 70%;
   float: right;
   border: solid 2px #30363D;
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: left;
   margin-bottom: 10px;
 }
 
-.user_profile_overview > .text {
+.text {
   margin: 20px 20px 20px 20px;
+}
+
+.user_profile_pin_repos {
+  width: 70%;
+  float: right;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.user_profile_repo {
+  border: solid 2px #30363D;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+  width: 49%;
+  height: 110px;
+}
+
+.urp_left {
+  float: left;
+}
+
+.urp_right {
+  float: right;
+}
+
+.repo_text {
+  margin-top: -10px;
+  color: #B1B5B0;
+  font-size: 14px;
+}
+
+.user_profile_repo_moe {
+  border: solid 2px #30363D;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 49%;
+  height: 110px;
 }
 
 @media ( max-width: 768px ) { /* 모바일 */
@@ -158,4 +206,17 @@ hr {
     display: none;
   }
   
+  .user_profile_pin_repos {
+    width: 100%;
+  }
+
+  .user_profile_repo {
+    width: 100%;
+  }
+
+  .urp_left,
+  .urp_right {
+    float: none;
+  }
+
 }
