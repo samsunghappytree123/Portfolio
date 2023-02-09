@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPlus, faThumbTack, faBook } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
@@ -7,6 +8,11 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 const Index = () => {
     return (
         <>
+            <Helmet>
+				<title>프로필 - Yunseo Jeong</title>
+				<meta property="og:title" content="프로필 - Yunseo Jeong" />
+			</Helmet>
+
             <div className='user_profile'>
                 <div className='user_profile_image'>
                     <img src='/favicon-192x192.png' alt='logo' width='296px' height='296px' style={{borderRadius: '50%', marginBottom: '10px'}}/>
