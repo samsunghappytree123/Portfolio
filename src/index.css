@@ -160,13 +160,70 @@ hr {
   font-size: 14px;
 }
 
-.user_profile_repo_moe {
-  border: solid 2px #30363D;
+.badge {
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 1px;
+  padding: 2px 5px;
   border-radius: 10px;
+  color: #B1B5B0;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 12px;
+  border: solid 1px #B1B5B0;
+}
+
+.repo_header {
+  margin: auto;
+  text-align: left;
+  width: 95%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.repo_tab {
+  margin: auto;
+  text-align: left;
+  width: 95%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.repo_tab button {
+  background-color: #0D1117;
+  border: none;
+  color: #fff;
+  font-family: Pretendard-SemiBold, TossFaceFont;
+  padding: 8px 10px;
   text-align: center;
-  margin-bottom: 10px;
-  width: 49%;
-  height: 110px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.repo_tab button:hover {
+  background-color: #21262C;
+}
+
+.repo_tab_hr > .repo_tab_hr1 {
+  width: 100%;
+  float: left;
+}
+
+.repo_tab_hr > .repo_tab_now {
+  width: 69px;
+  background-color: #F78166;
+  height: 4px;
+  position: absolute;
+  margin-top: 4.7px;
+  margin-left: 2.5%;
 }
 
 @media ( max-width: 768px ) { /* 모바일 */
@@ -217,6 +274,35 @@ hr {
   .urp_left,
   .urp_right {
     float: none;
+  }
+
+  .repo_header {
+    margin: auto;
+    text-align: left;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .repo_tab {
+    margin: auto;
+    text-align: left;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .repo_tab_hr > .repo_tab_now {
+    width: 69px;
+    background-color: #F78166;
+    height: 4px;
+    position: absolute;
+    margin-top: 4.7px;
+    margin-left: 5%;
   }
 
 }
