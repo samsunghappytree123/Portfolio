@@ -53,25 +53,25 @@ const Index = () => {
                     <div className='repo_list'>
                         <div className='user_profile_repo urp_left'>
                             <div className='text'>
-                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/about">About</Link></p>
+                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/about">About</Link> <span className='badge'>Public</span></p>
                                 <p className='repo_text'>🚀 안녕하세요, 삼해트입니다. 제 소개를 확인해보세요!</p>
                             </div>
                         </div>
                         <div className='user_profile_repo urp_right'>
                             <div className='text'>
-                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/projects">Projects</Link></p>
+                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/projects">Projects</Link> <span className='badge'>Public</span></p>
                                 <p className='repo_text'>🔧 제가 운영했던 프로젝트 목록을 소개합니다!</p>
                             </div>
                         </div>
                         <div className='user_profile_repo urp_left'>
                             <div className='text'>
-                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/ability-and-goal">Ability-and-Goal</Link></p>
+                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/ability-and-goal">Ability-and-Goal</Link> <span className='badge'>Public</span></p>
                                 <p className='repo_text'>🥇 저의 능력과 앞으로의 목표에 대해 작성했습니다!</p>
                             </div>
                         </div>
                         <div className='user_profile_repo urp_right'>
                             <div className='text'>
-                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/contact">Contact</Link></p>
+                                <p><FontAwesomeIcon icon={faBook} /> <Link to="/contact">Contact</Link> <span className='badge'>Public</span></p>
                                 <p className='repo_text'>📬 저와 연락할 수 있는 방법입니다! 편하게 연락주세요 :)</p>
                             </div>
                         </div>
