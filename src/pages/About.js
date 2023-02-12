@@ -13,7 +13,7 @@ const About = () => {
 			</Helmet>
 
             <div className='repo_header'>
-                <h3><FontAwesomeIcon icon={faBook} /> <Link to="/">YSJ</Link> / <Link to="/About">About</Link> <span className='badge'>Public</span></h3>
+                <h2><FontAwesomeIcon icon={faBook} /> <Link to="/">YSJ</Link> / <Link to="/About">About</Link> <span className='badge'>Public</span></h2>
             </div>
 
             <div className='repo_tab'>
