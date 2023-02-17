@@ -226,6 +226,37 @@ hr {
   margin-left: 2.5%;
 }
 
+.repo_page {
+  width: 90%;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.repo_content {
+  width: 69%;
+  float: left;
+  border: solid 2px #30363D;
+  border-radius: 5px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.repo_sidebar {
+  width: 29%;
+  float: right;
+  border: solid 2px #30363D;
+  border-radius: 5px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.repo_sidebar_m {
+  display: none;
+}
+
 @media ( max-width: 768px ) { /* 모바일 */
   .user_profile {
     text-align: center;
@@ -303,6 +334,23 @@ hr {
     position: absolute;
     margin-top: 4.7px;
     margin-left: 5%;
+  }
+
+  .repo_content{
+    width: 98%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .repo_sidebar {
+    display: none;
+  }
+
+  .repo_sidebar_m {
+    width: 100%;
+    display: block;
   }
 
 }
