@@ -194,7 +194,7 @@ hr {
   margin-top: 20px;
 }
 
-.repo_tab button {
+.repo_tab_btn {
   background-color: #0D1117;
   border: none;
   color: #fff;
@@ -227,7 +227,7 @@ hr {
 }
 
 .repo_page {
-  width: 90%;
+  width: 70%;
   margin: auto;
   flex-direction: column;
   align-items: center;
@@ -236,9 +236,12 @@ hr {
 }
 
 .repo_content {
-  width: 69%;
+  width: 70%;
   float: left;
-  border: solid 2px #30363D;
+  text-align: left;
+}
+
+.repo_files_frame {
   border-radius: 5px;
   text-align: left;
   margin-bottom: 10px;
@@ -255,6 +258,50 @@ hr {
 
 .repo_sidebar_m {
   display: none;
+}
+
+.repo_files {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.repo_files:hover {
+  background-color: #161B22;
+}
+
+.repo_branch_btn {
+  background-color: #161B22;
+  border: none;
+  color: #fff;
+  font-family: Pretendard-SemiBold, TossFaceFont;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  border: solid 1px #30363D;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.repo_branch_btn:hover {
+  background-color: #30363D;
+  border: solid 1px #8B949E;
+}
+
+.table_text {
+  margin: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.table_text > img {
+  margin-right: 10px;
+}
+
+th, td {
+  border: 2px solid #30363D;
 }
 
 @media ( max-width: 768px ) { /* 모바일 */
@@ -336,12 +383,20 @@ hr {
     margin-left: 5%;
   }
 
+  .repo_page {
+    width: 90%;
+  }
+
   .repo_content{
     width: 98%;
     margin: auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .repo_files_frame {
+    width: 100%;
   }
 
   .repo_sidebar {
