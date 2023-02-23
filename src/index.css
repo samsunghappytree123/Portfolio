@@ -304,6 +304,10 @@ th, td {
   border: 2px solid #30363D;
 }
 
+.mobile_br {
+  display: none;
+}
+
 @media ( max-width: 768px ) { /* 모바일 */
   .user_profile {
     text-align: center;
@@ -405,6 +409,10 @@ th, td {
 
   .repo_sidebar_m {
     width: 100%;
+    display: block;
+  }
+
+  .mobile_br {
     display: block;
   }
 

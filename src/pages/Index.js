@@ -75,7 +75,7 @@ const Index = () => {
                                 <p className='repo_text'>📬 저와 연락할 수 있는 방법입니다! 편하게 연락주세요 :)</p>
                             </div>
                         </div>
-                        <p style={{textAlign: 'center'}}>더 많은 레포지토리는 <Link to="/repositories">레포지토리 페이지</Link>에서 확인하세요!</p>
+                        <p style={{textAlign: 'center'}}>더 많은 레포지토리는 <br className='mobile_br' /><Link to="/repositories">레포지토리 페이지</Link>에서 확인하세요!</p>
                     </div>
                 </div>
             </div>
