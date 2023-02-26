@@ -5,6 +5,57 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook, faCode, faCodeBranch, faFile } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
+    var now = new Date(); 
+    var writeDay = new Date("2023-02-26 18:45:00");
+    
+    let ResultTime = "";
+    
+    var difference = now.getTime() - writeDay.getTime();
+    difference = Math.trunc(difference / 1000);
+    
+    const seconds = 1;
+    const minute = seconds * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+    const mon = day * 30;
+    const year = mon * 12;
+    
+    let resultYear, resultMon, resultDay, resultHour, resultMin, resultSec;
+
+    resultYear = Math.trunc(difference / year);
+    resultMon = Math.trunc(difference / mon);
+    resultDay = Math.trunc(difference / day);
+    resultHour = Math.trunc(difference / hour);
+    resultMin = Math.trunc(difference / minute);
+    resultSec = Math.trunc(difference / seconds);
+    if(resultSec > 0){
+        ResultTime = resultSec+'초';
+        difference = difference - (resultSec * seconds );
+    }
+    if(resultMin > 0){
+        ResultTime = resultMin+'분';
+        difference = difference - (resultMin * minute);
+    }
+    if(resultHour > 0){
+        ResultTime = resultHour+'시간';
+        difference = difference - (resultHour * hour);
+    }
+    if(resultDay > 0){
+        ResultTime = resultDay+'일';
+        difference = difference - (resultDay * day);
+    }
+    if(resultMon > 0){
+        ResultTime = resultMon+'개월';
+        difference=  difference - (resultMon * mon);
+    }
+    if(resultYear > 0){
+      ResultTime = resultYear+'년';
+      difference= difference - (resultYear * year);
+    }
+
+    const commitMessage = 'Hello, World!';
+    const pageDescription = '🚀 안녕하세요, 삼해트입니다. 제 소개를 확인해보세요!'
+
     return (
         <>
             <Helmet>
@@ -14,7 +65,7 @@ const About = () => {
 
             <div className='repo_header'>
                 <h2><FontAwesomeIcon icon={faBook} /> <Link to="/">YSJ</Link> / <Link to="/About">About</Link> <span className='badge'>Public</span></h2>
-                <div className='repo_sidebar_m'>여기는 설명이 올 예정입니다. (모바일 한정)</div>
+                <div className='repo_sidebar_m'>{pageDescription}</div>
             </div>
 
             <div className='repo_tab'>
@@ -31,30 +82,34 @@ const About = () => {
                         <table className='repo_files'>
                             <thead>
                                 <tr>
-                                    <th colspan="5" style={{backgroundColor: '#161B22'}}>
+                                    <th colSpan="3" style={{backgroundColor: '#161B22'}}>
                                         <div className='table_text'>
-                                            <img src='/favicon-192x192.png' alt='logo' width='32px' height='32px' style={{borderRadius: '50%'}}/> <Link to="/">YSJ</Link> <p style={{marginLeft: '10px'}}>Hello, World!</p>
+                                            <img src='/favicon-192x192.png' alt='logo' width='32px' height='32px' style={{borderRadius: '50%'}}/> <Link to="/">YSJ</Link> <p style={{marginLeft: '10px'}}>{commitMessage}</p>
                                         </div>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td style={{borderRight: 'none', width: '10px'}}></td>
-                                    <td style={{width: '18px', borderLeft: 'none', borderRight: 'none'}}>
-                                        <div style={{width: '5px', marginTop: '8px', marginBottom: '8px', fontSize: '18px'}}>
-                                            <FontAwesomeIcon icon={faFile} />
+                                    <td style={{minWidth: '140px', width: '20%', borderRight: 'none'}}>
+                                        <div style={{display: 'block', marginTop: '8px', marginBottom: '8px', marginLeft: '10px'}}>
+                                            <FontAwesomeIcon icon={faFile} style={{marginRight: '10px'}} />README.md
                                         </div>
                                     </td>
-                                    <td style={{borderLeft: 'none', borderRight: 'none', width: '5px'}}></td>
-                                    <td style={{borderLeft: 'none', borderRight: 'none', marginTop: '8px', marginBottom: '8px'}}>README.md</td>
-                                    <td style={{color: '#8B949E', borderLeft: 'none', marginTop: '8px', marginBottom: '8px'}}>Commit Message</td>
+                                    <td style={{minWidth: '100px', width: '5%', color: '#8B949E', borderLeft: 'none', borderRight: 'none'}}>
+                                        {commitMessage}
+                                    </td>
+                                    <td style={{minWidth: '70px', width: '20%', color: '#8B949E', borderLeft: 'none', marginTop: '8px', marginBottom: '8px'}}>
+                                        <div style={{textAlign: 'right', marginLeft: '8px', marginRight: '8px'}}>
+                                            {ResultTime} 전
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div className='repo_sidebar'>여기는 설명이 올 예정입니다. (PC 한정)</div>
+                <div className='repo_sidebar'>{pageDescription}</div>
             </div>
         </>
     )
