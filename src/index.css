@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('fonts/Pretendard-Bold.woff') format('woff');
+}
+
+@font-face {
   font-family: 'TossFaceFont';
   src: url('fonts/TossFaceFont.ttf') format('truetype');
 }
@@ -42,6 +47,10 @@ hr {
   background-color: #30363D;
   height:1px;
   border:0;
+}
+
+.boldText {
+  font-family: Pretendard-Bold, TossFaceFont;
 }
 
 .navbar {
@@ -248,12 +257,20 @@ hr {
 }
 
 .repo_sidebar {
-  width: 29%;
+  width: 28%;
   float: right;
-  border: solid 2px #30363D;
-  border-radius: 5px;
   text-align: left;
   margin-bottom: 10px;
+}
+
+.repo_sidebar > a {
+  text-decoration: none;
+  color: #8B949E;
+  margin-bottom: 10px;
+}
+
+.repo_sidebar > a:hover {
+  color: #58A6FF;
 }
 
 .repo_sidebar_m {
