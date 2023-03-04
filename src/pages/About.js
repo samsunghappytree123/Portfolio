@@ -99,7 +99,7 @@ const About = () => {
                                     <td style={{minWidth: '100px', width: '5%', color: '#8B949E', borderLeft: 'none', borderRight: 'none'}}>
                                         {commitMessage}
                                     </td>
-                                    <td style={{minWidth: '70px', width: '20%', color: '#8B949E', borderLeft: 'none', marginTop: '8px', marginBottom: '8px'}}>
+                                    <td style={{minWidth: '85px', width: '20%', color: '#8B949E', borderLeft: 'none', marginTop: '8px', marginBottom: '8px'}}>
                                         <div style={{textAlign: 'right', marginLeft: '8px', marginRight: '8px'}}>
                                             {ResultTime} 전
                                         </div>
