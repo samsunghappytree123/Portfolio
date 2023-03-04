@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faCode, faCodeBranch, faFile } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faCode, faCodeBranch, faFile, faBookOpen, faScaleBalanced, faStar } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
     var now = new Date(); 
@@ -55,6 +55,8 @@ const About = () => {
 
     const commitMessage = 'Hello, World!';
     const pageDescription = '🚀 안녕하세요, 삼해트입니다. 제 소개를 확인해보세요!'
+
+    const star = 0;
 
     return (
         <>
@@ -109,7 +111,14 @@ const About = () => {
                         </table>
                     </div>
                 </div>
-                <div className='repo_sidebar'>{pageDescription}</div>
+                <div className='repo_sidebar'>
+                    <p style={{fontSize: '25px'}} className="boldText">소개</p>
+                    {pageDescription}
+                    <hr style={{marginTop: '10px', marginBottom: '10px'}}/>
+                    <a href="#readme"><FontAwesomeIcon icon={faBookOpen} /> Readme</a><br />
+                    <a href="https://github.com/samsunghappytree123/Portfolio/blob/main/LICENSE" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faScaleBalanced} /> MIT license</a><br />
+                    <Link to="."><FontAwesomeIcon icon={faStar} /> {star} Star</Link><br />
+                </div>
             </div>
         </>
     )
