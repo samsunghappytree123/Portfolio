@@ -67,7 +67,12 @@ const About = () => {
 
             <div className='repo_header'>
                 <h2><FontAwesomeIcon icon={faBook} /> <Link to="/">YSJ</Link> / <Link to="/About">About</Link> <span className='badge'>Public</span></h2>
-                <div className='repo_sidebar_m'>{pageDescription}</div>
+                <div className='repo_sidebar_m'>
+                    {pageDescription}
+                    <div className="sideLinks" style={{marginTop: '10px', marginBottom: '10px', color: '#8B949E'}}>
+                        <a href="#readme"><FontAwesomeIcon icon={faBookOpen} /> Readme</a>  |  <a href="https://github.com/samsunghappytree123/Portfolio/blob/main/LICENSE" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faScaleBalanced} /> MIT license</a>  |  <a href="https://github.com/samsunghappytree123/Portfolio/stargazers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faStar} /> {star} Star</a>
+                    </div>
+                </div>
             </div>
 
             <div className='repo_tab'>
@@ -115,9 +120,15 @@ const About = () => {
                     <p style={{fontSize: '25px'}} className="boldText">소개</p>
                     {pageDescription}
                     <hr style={{marginTop: '10px', marginBottom: '10px'}}/>
-                    <a href="#readme"><FontAwesomeIcon icon={faBookOpen} /> Readme</a><br />
-                    <a href="https://github.com/samsunghappytree123/Portfolio/blob/main/LICENSE" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faScaleBalanced} /> MIT license</a><br />
-                    <Link to="."><FontAwesomeIcon icon={faStar} /> {star} Star</Link><br />
+                    <div style={{marginTop: '10px', marginBottom: '5px'}} className="sideLinks">
+                        <a href="#readme"><FontAwesomeIcon icon={faBookOpen} /> Readme</a>
+                    </div>
+                    <div style={{marginTop: '5px', marginBottom: '5px'}} className="sideLinks">
+                        <a href="https://github.com/samsunghappytree123/Portfolio/blob/main/LICENSE" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faScaleBalanced} /> MIT license</a>
+                    </div>
+                    <div style={{marginTop: '5px', marginBottom: '5px'}} className="sideLinks">
+                        <a href="https://github.com/samsunghappytree123/Portfolio/stargazers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faStar} /> {star} Star</a>
+                    </div>
                 </div>
             </div>
         </>

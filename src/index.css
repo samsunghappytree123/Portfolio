@@ -263,13 +263,13 @@ hr {
   margin-bottom: 10px;
 }
 
-.repo_sidebar > a {
+.sideLinks > a {
   text-decoration: none;
   color: #8B949E;
   margin-bottom: 10px;
 }
 
-.repo_sidebar > a:hover {
+.sideLinks > a:hover {
   color: #58A6FF;
 }
 
@@ -319,6 +319,12 @@ hr {
 
 th, td {
   border: 2px solid #30363D;
+}
+
+.sideLinks > a {
+  text-decoration: none;
+  color: #8B949E;
+  margin-bottom: 10px;
 }
 
 .mobile_br {
