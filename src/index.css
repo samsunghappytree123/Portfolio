@@ -224,6 +224,8 @@ hr {
 .repo_tab_hr > .repo_tab_hr1 {
   width: 100%;
   float: left;
+  position: absolute;
+  z-index: -2;
 }
 
 .repo_tab_hr > .repo_tab_now {
@@ -233,6 +235,7 @@ hr {
   position: absolute;
   margin-top: 4.7px;
   margin-left: 2.5%;
+  z-index: -1;
 }
 
 .repo_page {
@@ -252,6 +255,13 @@ hr {
 
 .repo_files_frame {
   border-radius: 5px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.repo_readme {
+  border: solid 2px #30363D;
+  border-radius: 10px;
   text-align: left;
   margin-bottom: 10px;
 }
