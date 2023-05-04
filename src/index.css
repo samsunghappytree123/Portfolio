@@ -436,6 +436,10 @@ th, td {
     width: 100%;
   }
 
+  .repo_readme {
+    width: 100%;
+  }
+
   .repo_sidebar {
     display: none;
   }
