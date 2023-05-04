@@ -120,20 +120,7 @@ const About = () => {
                         <p style={{textAlign: 'left', marginLeft: '20px'}}><code>README.md</code></p>
                         <hr />
                         <div className='text'>
-                            <h1># Yunseo Jeong</h1>
-                            <hr style={{marginTop: '-10px', marginBottom: '-10px'}} />
-                            <h2>😜 안녕하세요, 삼해트입니다.</h2>
-                            <p>
-                                저는 이것저것 개발하면서 즐기고 있는 학생 개발자입니다.<br />
-                            </p>
-
-                            <h2>## 나만의 깃허브 잔디밭</h2>
-                            <hr style={{marginTop: '-10px'}} />
-                            <img style={{marginBottom: '10px'}} src="https://ghchart.rshah.org/samsunghappytree123" alt='github_commit_graph' width="100%" height="auto" />
-                            <img style={{marginBottom: '10px'}} src='https://github-readme-stats.vercel.app/api?username=samsunghappytree123&show_icons=true&theme=transparent' alt='github_stats' />
-                            <img style={{marginBottom: '10px'}} src='https://github-readme-stats.vercel.app/api/top-langs/?username=samsunghappytree123&show_icons=true&theme=transparent&langs_count=4&layout=compact' alt='github_stats' height="auto" />
-
-                            <p>➡ 저에 대한 더 자세한 정보는 아래의 레포지토리 목록을 확인해주세요!</p>
+                            여기는 저에 대한 설명이 들어올 공간입니다!
                         </div>
                     </div>
                 </div>
