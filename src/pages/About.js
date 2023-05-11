@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook, faCode, faCodeBranch, faFile, faBookOpen, faScaleBalanced, faStar } from '@fortawesome/free-solid-svg-icons'
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from "rehype-raw";
+import remarkGfm from 'remark-gfm';
 
 const About = () => {
     var now = new Date(); 
@@ -55,6 +58,24 @@ const About = () => {
 
     const commitMessage = 'Hello, World!';
     const pageDescription = '🚀 안녕하세요, 삼해트입니다. 제 소개를 확인해보세요!'
+    const readme = `
+# # Happytree Samsung
+
+---
+
+😜 안녕하세요, 삼해트입니다.
+
+저는 이것저것 개발하면서 즐기고 있습니다.
+
+---
+
+## 활동 경력
+> 이 정보는 대략적으로 작성된 정보입니다.
++ **Team HT - 팀장 (2019.12.25. ~ 2021.12.25.)**
++ 홍보숲 - 메인 개발자 (2020.06 ~ 2021.06)
++ UniqueCode - 개발자 (2020.08. ~ 2021.08.)
++ **삼해트의 공방 - 공방 대표 / 메인 개발자 (2020.08. ~ 현재)**
+`
 
     const star = 0;
 
@@ -120,7 +141,23 @@ const About = () => {
                         <p style={{textAlign: 'left', marginLeft: '20px'}}><code>README.md</code></p>
                         <hr />
                         <div className='text'>
-                            여기는 저에 대한 설명이 들어올 공간입니다!
+                            <ReactMarkdown
+                                remarkPlugins={[remarkGfm]}
+                                rehypePlugins={[rehypeRaw]}
+                                components={{
+                                    blockquote({ node, children, ...props }) {
+                                        return (<blockquote style={{padding: '0 1.8em', color: '#c4c4c4', borderLeft: '0.2em solid #d0d7de'}} {...props}>{children}</blockquote>);
+                                    },
+                                    a({ node, children, ...props }) {
+                                        return (<a {...props} target="_blank">{children}</a>)
+                                    },
+                                    li({ node, children, ...props }) {
+                                        return (<li {...props} style={{lineHeight: '150%'}}>{children}</li>)
+                                    }
+                                }}
+                            >
+                                {readme}
+                            </ReactMarkdown>
                         </div>
                     </div>
                 </div>

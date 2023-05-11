@@ -49,6 +49,10 @@ hr {
   border:0;
 }
 
+strong {
+  font-family: Pretendard-Bold, TossFaceFont;
+}
+
 .boldText {
   font-family: Pretendard-Bold, TossFaceFont;
 }
