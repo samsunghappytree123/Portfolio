@@ -1,0 +1,18 @@
+{
+    "about": {
+        "name": "About",
+        "description": "🚀 안녕하세요, 삼해트입니다. 제 소개를 확인해보세요!",
+        "writeDay": "2023-02-26 18:45:00",
+        "commitMessage": "Hello, World!",
+        "files": [
+            {
+                "name": "readme.md",
+                "title": "README.md",
+                "fileUrl": "/about/README.md",
+                "content": "# # Happytree Samsung\n\n---\n\n😜 안녕하세요, 삼해트입니다.\n\n저는 이것저것 개발하면서 즐기고 있습니다.\n\n---\n\n## 활동 경력\n> 이 정보는 대략적으로 작성된 정보입니다.\n+ **Team HT - 팀장 (2019.12.25. ~ 2021.12.25.)**\n+ 홍보숲 - 메인 개발자 (2020.06 ~ 2021.06)\n+ UniqueCode - 개발자 (2020.08. ~ 2021.08.)\n+ **삼해트의 공방 - 공방 대표 / 메인 개발자 (2020.08. ~ 현재)**",
+                "writeDay": "2023-02-26 18:45:00",
+                "commitMessage":"Hello, World!"
+            }
+        ]
+    }
+}

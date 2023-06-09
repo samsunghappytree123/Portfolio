@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Pretendard-SemiBold';
-  src: url('fonts/Pretendard-SemiBold.woff') format('woff');
+  src: url('/fonts/Pretendard-SemiBold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Pretendard-Bold';
-  src: url('fonts/Pretendard-Bold.woff') format('woff');
+  src: url('/fonts/Pretendard-Bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'TossFaceFont';
-  src: url('fonts/TossFaceFont.ttf') format('truetype');
+  src: url('/fonts/TossFaceFont.ttf') format('truetype');
 }
 
 body {
@@ -296,7 +296,7 @@ strong {
   border-collapse: collapse;
 }
 
-.repo_files:hover {
+.file_list_tr:hover {
   background-color: #161B22;
 }
 
@@ -324,6 +324,7 @@ strong {
 .table_text {
   margin: 0px 10px;
   display: flex;
+  float: left;
   align-items: center;
 }
 
@@ -333,6 +334,23 @@ strong {
 
 th, td {
   border: 2px solid #30363D;
+}
+
+.tableLink > a {
+  text-decoration: none;
+  color: white;
+}
+
+.tableLink > a:hover {
+  text-decoration: underline;
+  color: #58A6FF
+}
+
+.repo_code {
+  border: solid 2px #30363D;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 .sideLinks > a {
