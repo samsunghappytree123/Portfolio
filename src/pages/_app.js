@@ -1,16 +1,35 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { Router, useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import Navbar from './components/Nav'
+import Loader from './components/Loader'
+import NProgress from 'nprogress'
 
 import '@/styles/index.css'
-import Navbar from './components/Nav'
+import "nprogress/nprogress.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  NProgress.configure({showSpinner: false});
 
   useEffect(() => storePathValues, [router.asPath]);
+
+  useEffect(() => {
+    Router.events.on("routeChangeStart", (url)=>{
+      NProgress.start()
+    });
+
+    Router.events.on("routeChangeComplete", (url)=>{
+      NProgress.done(false)
+    });
+  
+    Router.events.on("routeChangeError", (url) =>{
+      NProgress.done(false)
+    });
+  }, [Router])
 
   function storePathValues() {
     const storage = globalThis?.sessionStorage;
@@ -23,6 +42,7 @@ export default function App({ Component, pageProps }) {
   }
 
   return (<>
+    {isLoading && <Loader/>}
     <Navbar />
     <Component {...pageProps} />
   </>)
