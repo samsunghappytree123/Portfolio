@@ -1,11 +1,9 @@
 import { Router, useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Navbar from './components/Nav'
-import Loader from './components/Loader'
 import NProgress from 'nprogress'
 
 import '@/styles/index.css'
-import '@/styles/Loader.module.css';
 import "nprogress/nprogress.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -13,7 +11,6 @@ config.autoAddCss = false
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
   NProgress.configure({showSpinner: false});
 
   useEffect(() => storePathValues, [router.asPath]);
@@ -43,7 +40,6 @@ export default function App({ Component, pageProps }) {
   }
 
   return (<>
-    {isLoading && <Loader/>}
     <Navbar />
     <Component {...pageProps} />
   </>)

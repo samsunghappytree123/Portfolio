@@ -13,6 +13,10 @@
   src: url('/fonts/TossFaceFont.ttf') format('truetype');
 }
 
+#nprogress .bar {
+  background: #58A6FF !important;
+}
+
 body {
   margin: 0;
   padding-top: 60px;
