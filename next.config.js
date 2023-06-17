@@ -4,7 +4,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: { runtime: 'edge'} 
 }
 
 module.exports = nextConfig
