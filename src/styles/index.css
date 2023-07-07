@@ -15,6 +15,7 @@
 
 #nprogress .bar {
   background: #58A6FF !important;
+  height: 3px !important;
 }
 
 body {
@@ -90,7 +91,7 @@ strong {
 }
 
 .nav_menu li {
-  padding: 10%;
+  padding: 10px;
 }
 
 .nav_menu a {
