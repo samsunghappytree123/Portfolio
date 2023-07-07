@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link'
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faCode } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faCode, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from "rehype-raw";
 import remarkGfm from 'remark-gfm';
