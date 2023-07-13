@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import * as checkScript from '../components/Day.js'
+export const runtime = 'experimental-edge';
 
 export default function noticeHome({list}) {
   return (
