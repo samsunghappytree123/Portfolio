@@ -1,4 +1,4 @@
-export function dayCheck(wantDate) {
+export default function dayCheck(wantDate) {
     var now = new Date();
     var writeDay = new Date(wantDate);
     let ResultTime = "";
