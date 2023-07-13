@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import * as checkScript from '../components/Day.js'
 
-export default function noticeHome() {
+export default function noticeHome({list}) {
   return (
     <>
       <Head>
@@ -26,23 +26,27 @@ export default function noticeHome() {
                 </tr>
                 </thead>
                 <tbody>
-                    <tr className='file_list_tr'>
-                        <td style={{borderRight: 'none'}}>
-                            <div style={{textAlign: 'center', margin: '8px'}} className='tableLink'>
-                                1
-                            </div>
-                        </td>
-                        <td style={{borderRight: 'none'}}>
-                            <div style={{textAlign: 'left', margin: '8px'}} className='tableLink noticeTitle'>
-                                <Link href="/notice/1">공지사항 게시판이 생성되었습니다!</Link>
-                            </div>
-                        </td>
-                        <td style={{color: '#8B949E', margin: '8px'}}>
-                            <div style={{textAlign: 'center', marginLeft: '8px', marginRight: '8px'}}>
-                                13시간 전
-                            </div>
-                        </td>
-                    </tr>
+                    {list.data.map(notice => (
+                        <>
+                            <tr className='file_list_tr'>
+                                <td style={{borderRight: 'none'}}>
+                                    <div style={{textAlign: 'center', margin: '8px'}} className='tableLink'>
+                                        {notice.id}
+                                    </div>
+                                </td>
+                                <td style={{borderRight: 'none'}}>
+                                    <div style={{textAlign: 'left', margin: '8px'}} className='tableLink noticeTitle'>
+                                        <Link href="/notice/1">{notice.title}</Link>
+                                    </div>
+                                </td>
+                                <td style={{color: '#8B949E', margin: '8px'}}>
+                                    <div style={{textAlign: 'center', marginLeft: '8px', marginRight: '8px'}}>
+                                        {checkScript.dayCheck(notice.writeDate)} 전
+                                    </div>
+                                </td>
+                            </tr>
+                        </>
+                    ))}
                 </tbody>
             </table>
         </div>
@@ -51,3 +55,11 @@ export default function noticeHome() {
     </>
   )
 }
+
+export async function getServerSideProps(context) {
+    const res = await fetch("https://sage-naiad-5bcd9d.netlify.app/list.json");
+    const list = await res.json();
+    return {
+      props: {list: list},
+    };
+  }
