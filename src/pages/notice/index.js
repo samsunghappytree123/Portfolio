@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import * as checkScript from '../components/Day.js'
 
-export default function Home() {
+export default function noticeHome() {
   return (
     <>
       <Head>
@@ -19,24 +20,24 @@ export default function Home() {
             <table className='repo_files'>
                 <thead>
                 <tr>
-                    <th><h4 style={{textAlign: 'center'}}>ID</h4></th>
-                    <th><h4 style={{textAlign: 'center'}}>제목</h4></th>
-                    <th><h4 style={{textAlign: 'center'}}>게시일</h4></th>
+                    <th style={{width: '45px'}}><div className="noticeHeader">ID</div></th>
+                    <th><div className="noticeHeader">제목</div></th>
+                    <th style={{width: '90px'}}><div className="noticeHeader">게시일</div></th>
                 </tr>
                 </thead>
                 <tbody>
                     <tr className='file_list_tr'>
-                        <td style={{width: '15px', borderRight: 'none'}}>
-                            <div style={{textAlign: 'center', marginLeft: '8px', marginRight: '8px', marginTop: '8px', marginBottom: '8px'}} className='tableLink'>
-                                100
+                        <td style={{borderRight: 'none'}}>
+                            <div style={{textAlign: 'center', margin: '8px'}} className='tableLink'>
+                                1
                             </div>
                         </td>
                         <td style={{borderRight: 'none'}}>
-                            <div style={{textAlign: 'left', marginLeft: '8px', marginRight: '8px'}} className='tableLink'>
-                                <Link href="/notice/1">[공지] 공지사항 게시판이 생성되었습니다!</Link>
+                            <div style={{textAlign: 'left', margin: '8px'}} className='tableLink noticeTitle'>
+                                <Link href="/notice/1">공지사항 게시판이 생성되었습니다!</Link>
                             </div>
                         </td>
-                        <td style={{minWidth: '85px', width: '20%', color: '#8B949E', marginTop: '8px', marginBottom: '8px'}}>
+                        <td style={{color: '#8B949E', margin: '8px'}}>
                             <div style={{textAlign: 'center', marginLeft: '8px', marginRight: '8px'}}>
                                 13시간 전
                             </div>
