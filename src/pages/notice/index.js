@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import * as checkScript from '../components/Day.js'
+import dayCheck from '../components/Day.js'
 export const runtime = 'experimental-edge';
 
 export default function noticeHome({list}) {
@@ -42,7 +42,7 @@ export default function noticeHome({list}) {
                                 </td>
                                 <td style={{color: '#8B949E', margin: '8px'}}>
                                     <div style={{textAlign: 'center', marginLeft: '8px', marginRight: '8px'}}>
-                                        {checkScript.dayCheck(notice.writeDate)} 전
+                                        {dayCheck(notice.writeDate)} 전
                                     </div>
                                 </td>
                             </tr>

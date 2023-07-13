@@ -7,7 +7,7 @@ import { faBook, faCode, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from "rehype-raw";
 import remarkGfm from 'remark-gfm';
-import * as checkScript from '../components/Day.js'
+import dayCheck from '../components/Day.js'
 export const runtime = 'experimental-edge';
 
 export default function ResolveRoute({data, url, title, description, fileData}) {
@@ -49,7 +49,7 @@ export default function ResolveRoute({data, url, title, description, fileData}) 
                                     <div className='table_text'>
                                         <img src='/favicon-192x192.png' alt='logo' width='32px' height='32px' style={{borderRadius: '50%'}}/> <Link href="/">YSJ</Link> <p style={{marginLeft: '10px'}}>{data.commitMessage}</p>
                                     </div>
-                                    <div style={{textAlign: 'right', marginTop: '15px', marginLeft: '8px', marginRight: '8px'}}>{checkScript.dayCheck(data.writeDay)} 전</div>
+                                    <div style={{textAlign: 'right', marginTop: '15px', marginLeft: '8px', marginRight: '8px'}}>{dayCheck(data.writeDay)} 전</div>
                                 </th>
                             </tr>
                         </thead>
