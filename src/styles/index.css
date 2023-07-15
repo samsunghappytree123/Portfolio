@@ -370,6 +370,13 @@ th, td {
   margin: 10px;
 }
 
+.noticeDetailContent {
+  border: solid 2px #30363D;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
 .mobile_br {
   display: none;
 }
