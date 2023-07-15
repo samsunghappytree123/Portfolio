@@ -1,4 +1,3 @@
-import Error from 'next/error'
 import React from 'react';
 import Link from 'next/link'
 import Head from 'next/head';
@@ -8,11 +7,12 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from "rehype-raw";
 import remarkGfm from 'remark-gfm';
 import dayCheck from '../components/Day.js'
+import NotFound from '../404.js';
 export const runtime = 'experimental-edge';
 
 export default function ResolveRoute({data, url, title, description, fileData}) {
   if (data === undefined) {
-    return <Error statusCode={404} />
+    return <NotFound />
   } else {
     const star = 0;
     return (
