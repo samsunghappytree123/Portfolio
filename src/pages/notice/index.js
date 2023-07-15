@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import dayCheck from '../components/Day.js'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBullhorn } from '@fortawesome/free-solid-svg-icons'
 export const runtime = 'experimental-edge';
 
 export default function noticeHome({list}) {
@@ -16,7 +18,7 @@ export default function noticeHome({list}) {
 
       <main>
         <div className='repo_page'>
-        <h1>공지사항</h1>
+        <h1><FontAwesomeIcon icon={faBullhorn} /> 공지사항</h1>
         <div className='repo_files_frame'>
             <table className='repo_files'>
                 <thead>
@@ -27,7 +29,10 @@ export default function noticeHome({list}) {
                 </tr>
                 </thead>
                 <tbody>
-                    {list.data.map(notice => (
+                {
+                    list.data.length === 0
+                    ? <tr className='file_list_tr'><td colSpan="3"><div style={{textAlign: 'center', margin: '8px'}}>공지사항이 없습니다.</div></td></tr>
+                    : list.data.map(notice => (
                         <>
                             <tr className='file_list_tr'>
                                 <td style={{borderRight: 'none'}}>
@@ -47,7 +52,8 @@ export default function noticeHome({list}) {
                                 </td>
                             </tr>
                         </>
-                    ))}
+                    ))
+                }
                 </tbody>
             </table>
         </div>
@@ -57,10 +63,16 @@ export default function noticeHome({list}) {
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
     const res = await fetch("https://sage-naiad-5bcd9d.netlify.app/list.json");
-    const list = await res.json();
-    return {
-      props: {list: list},
-    };
-  }
+    if (res.status !== 200) {
+        return {
+            props: {list: {data: []}}
+        }
+    } else {
+        const list = await res.json();
+        return {
+            props: {list: list},
+        };
+    }
+}
