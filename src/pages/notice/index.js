@@ -64,7 +64,7 @@ export default function noticeHome({list}) {
 }
 
 export async function getServerSideProps() {
-    const res = await fetch("https://sage-naiad-5bcd9d.netlify.app/list.json");
+    const res = await fetch("https://api.hysj.kr/portfolio/notice/list");
     if (res.status !== 200) {
         return {
             props: {list: {data: []}}

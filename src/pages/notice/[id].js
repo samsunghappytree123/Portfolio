@@ -57,16 +57,13 @@ export default function noticeDetail({data, title}) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch("https://sage-naiad-5bcd9d.netlify.app/content.json");
+  const res = await fetch(`https://api.hysj.kr/portfolio/notice/get?id=${context.params.id}`);
   if (res.status !== 200) {
     return {props: {}}
   } else {
     const list = await res.json();
-    if (list[context.params.id] === undefined) {
-      return {props: {}}
-    }
     return {
-      props: {data: list[context.params.id], title: `${list[context.params.id]['title']} > 공지사항 - Yunseo Jeong`,}
+      props: {data: list['data'], title: `${list['data']['title']} > 공지사항 - Yunseo Jeong`,}
     };
   }
 }
