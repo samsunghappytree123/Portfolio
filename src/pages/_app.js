@@ -1,6 +1,7 @@
 import { Router, useRouter } from "next/router";
 import { useEffect } from "react";
 import Navbar from './components/Nav'
+import Footer from './components/Footer'
 import NProgress from 'nprogress'
 
 import '@/styles/index.css'
@@ -42,5 +43,6 @@ export default function App({ Component, pageProps }) {
   return (<>
     <Navbar />
     <Component {...pageProps} />
+    <Footer />
   </>)
 }

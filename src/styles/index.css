@@ -377,6 +377,16 @@ th, td {
   margin-bottom: 10px;
 }
 
+.footer {
+  clear: both;
+  text-align: center;
+  background-color: #30363D;
+}
+
+.footer > p {
+  margin-bottom: 0px;
+}
+
 .mobile_br {
   display: none;
 }
