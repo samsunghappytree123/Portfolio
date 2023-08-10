@@ -1,16 +1,19 @@
 @font-face {
   font-family: 'Pretendard-SemiBold';
   src: url('/fonts/Pretendard-SemiBold.woff') format('woff');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Pretendard-Bold';
   src: url('/fonts/Pretendard-Bold.woff') format('woff');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'TossFaceFont';
   src: url('/fonts/TossFaceFont.ttf') format('truetype');
+  font-display: swap;
 }
 
 #nprogress .bar {
