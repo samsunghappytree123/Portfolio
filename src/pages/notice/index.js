@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import dayCheck from '../components/Day.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBullhorn } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faCode, faBullhorn } from '@fortawesome/free-solid-svg-icons'
 export const runtime = 'experimental-edge';
 
 export default function noticeHome({list}) {
@@ -17,6 +17,20 @@ export default function noticeHome({list}) {
       </Head>
 
       <main>
+
+      <div className='repo_header'>
+          <h2><FontAwesomeIcon icon={faBook} /> <Link href="/">YSJ</Link> / <Link href='/notice'>Notice</Link> <span className='badge'>Public</span></h2>
+        </div>
+
+        <div className='repo_tab'>
+          <Link href="/notice"><button className='repo_tab_btn'><FontAwesomeIcon icon={faCode} /> 코드</button></Link>
+        </div>
+
+        <div className='repo_tab_hr'>
+          <div className='repo_tab_hr1'><hr /></div>
+          <div className='repo_tab_now'></div>
+        </div>
+
         <div className='repo_page'>
         <h1><FontAwesomeIcon icon={faBullhorn} /> 공지사항</h1>
         <div className='repo_files_frame'>

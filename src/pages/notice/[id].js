@@ -1,7 +1,8 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import dayCheck from '../components/Day.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBullhorn, faUser, faCalendar } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faCode, faBullhorn, faUser, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from "rehype-raw";
 import remarkGfm from 'remark-gfm';
@@ -23,6 +24,20 @@ export default function noticeDetail({data, title}) {
         </Head>
 
         <main>
+
+        <div className='repo_header'>
+            <h2><FontAwesomeIcon icon={faBook} /> <Link href="/">YSJ</Link> / <Link href='/notice'>Notice</Link> <span className='badge'>Public</span></h2>
+          </div>
+
+          <div className='repo_tab'>
+            <Link href="/notice"><button className='repo_tab_btn'><FontAwesomeIcon icon={faCode} /> 코드</button></Link>
+          </div>
+
+          <div className='repo_tab_hr'>
+            <div className='repo_tab_hr1'><hr /></div>
+            <div className='repo_tab_now'></div>
+          </div>
+
           <div className='repo_page'>
             <div className='noticeDetailHeader'>
               <h1 style={{textAlign: 'center'}}><FontAwesomeIcon icon={faBullhorn} /> {data.title}</h1>
