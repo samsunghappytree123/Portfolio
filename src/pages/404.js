@@ -20,7 +20,7 @@ export default function NotFound() {
 					display: 'flex',
 					justifyContent: 'center',
 					alignItems: 'center',
-					minHeight: '90vh',
+					minHeight: '93vh',
                     textAlign: 'center'
 				}}
 			>
