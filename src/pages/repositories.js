@@ -1,12 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPlus, faThumbTack, faBook } from '@fortawesome/free-solid-svg-icons'
-import { faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faBook, faList } from '@fortawesome/free-solid-svg-icons'
 import styles from '@/styles/repositories.module.css'
+export const runtime = 'experimental-edge';
 
-export default function Home() {
+export default function repositories() {
+    const data = require('./[root]/data.json')
+
     return (
         <>
             <Head>
@@ -19,9 +20,17 @@ export default function Home() {
 
             <main>
                 <div className={styles.list}>
-                    <hr />
-                    <h1>🌟 여기에 레포지토리 목록 입력</h1>
-                    <hr />
+                    <h1 style={{textAlign: 'left'}}><FontAwesomeIcon icon={faList} /> 레포지토리 목록</h1>
+                    {Object.keys(data).map(repo => (
+                        <>
+                            <hr />
+                            <div className={styles.text}>
+                                <h2><FontAwesomeIcon icon={faBook} /> <Link href={(data[repo].name).toLowerCase()}>{data[repo].name}</Link> <span className='badge'>Public</span></h2>
+                                <p className={styles.repo_text}>{data[repo].description}</p> <p className={styles.repo_rtext}>마지막 업데이트 : {data[repo].writeDay}</p>
+                            </div>
+                        </>
+                    ))}
+                    <hr style={{marginBottom: '30px'}} />
                 </div>
             </main>
         </>

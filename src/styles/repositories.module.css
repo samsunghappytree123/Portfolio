@@ -7,3 +7,27 @@
   justify-content: center;
   margin-top: 30px;
 }
+
+.text {
+  margin: 20px 20px 20px 20px;
+  text-align: left;
+}
+
+.repo_text {
+  margin-top: -10px;
+  color: #B1B5B0;
+  font-size: 16px;
+}
+
+.repo_rtext{
+  text-align: right;
+  margin-top: -10px;
+  color: #B1B5B0;
+  font-size: 12px;
+}
+
+@media ( max-width: 768px ) { /* 모바일 */
+  .list {
+    width: 90%;
+  }
+}
