@@ -46,10 +46,10 @@ export default function Home() {
 
               <h2>## 나만의 깃허브 잔디밭</h2>
               <hr style={{marginTop: '-10px'}} />
-              <Image style={{marginBottom: '10px'}} src="https://ghchart.rshah.org/samsunghappytree123" alt='github_commit_graph' width={900} height={100} />
+              <img style={{marginBottom: '10px'}} src="https://ghchart.rshah.org/samsunghappytree123" alt='github_commit_graph' width={900} height={100} />
               <div>
-                <Image style={{marginBottom: '10px'}} src='https://github-readme-stats.vercel.app/api?username=samsunghappytree123&show_icons=true&theme=transparent' alt='github_stats' width={400} height={140} />
-                <Image style={{marginBottom: '10px'}} src='https://github-readme-stats.vercel.app/api/top-langs/?username=samsunghappytree123&show_icons=true&theme=transparent&langs_count=4&layout=compact' alt='github_stats' width={400} height={140} />
+                <img style={{marginBottom: '10px'}} src='https://github-readme-stats.vercel.app/api?username=samsunghappytree123&show_icons=true&theme=transparent' alt='github_stats' width={400} height={140} />
+                <img style={{marginBottom: '10px'}} src='https://github-readme-stats.vercel.app/api/top-langs/?username=samsunghappytree123&show_icons=true&theme=transparent&langs_count=4&layout=compact' alt='github_stats' width={400} height={140} />
               </div>
 
               <p>➡ 저에 대한 더 자세한 정보는 아래의 레포지토리 목록을 확인해주세요!</p>
