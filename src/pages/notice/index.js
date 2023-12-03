@@ -56,7 +56,7 @@ export default function noticeHome({list}) {
                                 </td>
                                 <td style={{borderRight: 'none'}}>
                                     <div style={{textAlign: 'left', margin: '8px'}} className='tableLink noticeTitle'>
-                                        <Link href="/notice/1">{notice.title}</Link>
+                                        <Link href={notice.path}>{notice.title}</Link>
                                     </div>
                                 </td>
                                 <td style={{color: '#8B949E', margin: '8px'}}>
