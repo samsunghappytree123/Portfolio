@@ -7,35 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook, faCode, faSpinner } from '@fortawesome/free-solid-svg-icons'
 export const runtime = 'experimental-edge';
 
-export default function projectsHome({}) {
-    const [projects, setProjects] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            setLoading(true);
-            try {
-                const response = await axios.get('https://api.hysj.kr/portfolio/projects');
-                setProjects(response.data.data);
-            }
-            catch (e) {
-                console.log(e);
-                setError(true);
-            }
-            setLoading(false)
-        };
-        fetchData();
-    }, [])
-
+export default function projectsHome({list, error}) {
     return (
         <>
             <Head>
                 <title>Projects - Yunseo Jeong</title>
                 <meta name="title" content="Projects - Yunseo Jeong" />
                 <meta property="og:title" content="Projects - Yunseo Jeong" />
-                <meta name="description" content="안녕하세요, 삼해트입니다." />
-                <meta name="og:description" content="안녕하세요, 삼해트입니다." />
+                <meta name="description" content="제 프로젝트들을 확인해보세요!" />
+                <meta name="og:description" content="제 프로젝트들을 확인해보세요!" />
             </Head>
 
             <main>
@@ -55,20 +35,35 @@ export default function projectsHome({}) {
 
                 <div className='repo_page'>
                     {
-                        loading
-                        ? <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '77.5vh' }}><h1><FontAwesomeIcon icon={faSpinner} spinPulse /> 로딩중입니다...</h1></div>
-                        : (
-                        error
-                            ? <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '77.5vh' }}><h1>⚠️ 오류가 발생했습니다.</h1></div>
-                            : (
-                            !projects
-                                ? null
-                                : <h1>My Projects</h1>
-                            )
-                        )
+                        error === true
+                        ? <h1>오류가 발생했습니다.</h1>
+                        : list.data.map(project => (
+                            <>
+                                <div className='user_profile_repo'>
+                                    <div className='text'>
+                                    <p><FontAwesomeIcon icon={faBook} /> <Link href={project.path}>{project.name}</Link> <span className='badge'>Public</span></p>
+                                    <p className='repo_text'>{project.shortDescription}</p>
+                                    </div>
+                                </div>
+                            </>
+                        ))
                     }
                 </div>
             </main>
         </>
     )
+}
+
+export async function getServerSideProps() {
+    const res = await fetch("https://api.hysj.kr/portfolio/projects/list");
+    if (res.status !== 200) {
+        return {
+            props: {list: {data: []}, error: true}
+        }
+    } else {
+        const list = await res.json();
+        return {
+            props: {list: list, error: false},
+        };
+    }
 }
