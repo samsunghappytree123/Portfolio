@@ -34,10 +34,9 @@ export default function noticeHome({list}) {
         <div className='repo_page'>
         <h1><FontAwesomeIcon icon={faBullhorn} /> 공지사항</h1>
         <div className='repo_files_frame'>
-            <table className='repo_files'>
+            <table className='repo_files' style={{tableLayout: 'fixed'}}>
                 <thead>
                 <tr>
-                    <th style={{width: '45px'}}><div className="noticeHeader">ID</div></th>
                     <th><div className="noticeHeader">제목</div></th>
                     <th style={{width: '90px'}}><div className="noticeHeader">게시일</div></th>
                 </tr>
@@ -45,16 +44,11 @@ export default function noticeHome({list}) {
                 <tbody>
                 {
                     list.data.length === 0
-                    ? <tr className='file_list_tr'><td colSpan="3"><div style={{textAlign: 'center', margin: '8px'}}>공지사항이 없습니다.</div></td></tr>
+                    ? <tr className='file_list_tr'><td colSpan="2"><div style={{textAlign: 'center', margin: '8px'}}>공지사항이 없습니다.</div></td></tr>
                     : list.data.map(notice => (
                         <>
                             <tr className='file_list_tr'>
-                                <td style={{borderRight: 'none'}}>
-                                    <div style={{textAlign: 'center', margin: '8px'}} className='tableLink'>
-                                        {notice.id}
-                                    </div>
-                                </td>
-                                <td style={{borderRight: 'none'}}>
+                                <td style={{borderRight: 'none', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis'}}>
                                     <div style={{textAlign: 'left', margin: '8px'}} className='tableLink noticeTitle'>
                                         <Link href={notice.path}>{notice.title}</Link>
                                     </div>
