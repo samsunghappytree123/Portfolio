@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import NProgress from 'nprogress'
 
 import '@/styles/index.css'
+import '@/styles/card.css'
 import "nprogress/nprogress.css";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
