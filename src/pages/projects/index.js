@@ -34,20 +34,22 @@ export default function projectsHome({list, error}) {
                 </div>
 
                 <div className='repo_page'>
-                    {
-                        error === true
-                        ? <h1>오류가 발생했습니다.</h1>
-                        : list.data.map(project => (
-                            <>
-                                <div className='user_profile_repo'>
-                                    <div className='text'>
-                                    <p><FontAwesomeIcon icon={faBook} /> <Link href={project.path}>{project.name}</Link> <span className='badge'>Public</span></p>
-                                    <p className='repo_text'>{project.shortDescription}</p>
+                    <div className='cardContanier'>
+                        {
+                            error === true
+                            ? <h1>오류가 발생했습니다.</h1>
+                            : list.data.map(project => (
+                                <>
+                                    <div className='card'>
+                                        <div className='text'>
+                                            <p><FontAwesomeIcon icon={faBook} /> <Link href={project.path}>{project.name}</Link> <span className='badge'>운영 중</span></p>
+                                            <p className='repo_text'>{project.shortDescription}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </>
-                        ))
-                    }
+                                </>
+                            ))
+                        }
+                    </div>
                 </div>
             </main>
         </>
