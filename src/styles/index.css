@@ -194,6 +194,19 @@ strong {
   border: solid 1px #B1B5B0;
 }
 
+.badgeYellow {
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 1px;
+  padding: 2px 5px;
+  border-radius: 10px;
+  color: #CC9922;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 12px;
+  border: solid 1px #CC9922;
+}
+
 .repo_header {
   margin: auto;
   text-align: left;
