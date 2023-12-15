@@ -6,7 +6,6 @@ export default function Document() {
       <Head>
         <title>Yunseo Jeong</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#76ff9f" />
         <meta property="og:image" content="/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
