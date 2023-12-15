@@ -1,37 +1,11 @@
-.cardContaniner{
-    margin: 0 auto;
-    padding: 100px;
+.cardContainer {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(1, minmax(100px, auto));
 }
 
 .card {
-    display: inline-block;
-    width: 30%;
-    margin-top: 40px;
-    margin-left: 5%;
     border: solid 2px #30363D;
     border-radius: 10px;
-}
-
-.card:nth-child(-n+3) {
-    margin-top: 0;
-}
-
-.card:nth-child(3n-2) {
-    margin-left: 0;
-}
-
-@media ( max-width: 768px ) { /* 모바일 */
-    .cardContaniner{
-        margin: 0 auto;
-        padding: 100px;
-    }
-    
-    .card {
-        display: inline-block;
-        width: 100%;
-        margin-top: 40px;
-        margin-left: 5%;
-        border: solid 2px #30363D;
-        border-radius: 10px;
-    }    
 }
