@@ -9,3 +9,8 @@
     border: solid 2px #30363D;
     border-radius: 10px;
 }
+
+.cardImage {
+    float: left;
+    margin: 10px;
+}
