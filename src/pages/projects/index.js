@@ -39,7 +39,7 @@ export default function projectsHome({list, error}) {
                             ? <h1>오류가 발생했습니다.</h1>
                             : list.data.map(project => (
                                 <div className='card' key={project.name}>
-                                    <div className='cardImage'><Image src={project.defaultImage} width="80" height="80" /></div>
+                                    <div className='cardImage'><Image src={project.defaultImage} width="100" height="100" /></div>
                                     <div className='text'>
                                         <p><FontAwesomeIcon icon={faBook} /> <Link href={project.path}>{project.name}</Link> {project.activate === true ? <span className='badge'>운영 중</span> : <span className='badgeYellow'>운영 종료</span>}</p>
                                         <p className='repo_text'>{project.shortDescription}</p>
