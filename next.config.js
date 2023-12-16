@@ -6,7 +6,7 @@ const nextConfig = {
   },
   images: {
     dangerouslyAllowSVG: true,
-    domains: ['ghchart.rshah.org', 'github-readme-stats.vercel.app'],
+    domains: ['ghchart.rshah.org', 'github-readme-stats.vercel.app', 'htb.htlab.kr'],
   },
 }
 
