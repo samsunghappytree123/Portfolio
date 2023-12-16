@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
-import dayCheck from '../components/Day.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faCode, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faCode } from '@fortawesome/free-solid-svg-icons'
 export const runtime = 'experimental-edge';
 
 export default function projectsHome({list, error}) {
@@ -41,6 +39,7 @@ export default function projectsHome({list, error}) {
                             ? <h1>오류가 발생했습니다.</h1>
                             : list.data.map(project => (
                                 <div className='card' key={project.name}>
+                                    <div className='cardImage'><Image src={project.defaultImage} width="80" height="80" /></div>
                                     <div className='text'>
                                         <p><FontAwesomeIcon icon={faBook} /> <Link href={project.path}>{project.name}</Link> {project.activate === true ? <span className='badge'>운영 중</span> : <span className='badgeYellow'>운영 종료</span>}</p>
                                         <p className='repo_text'>{project.shortDescription}</p>
