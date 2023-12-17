@@ -6,7 +6,17 @@ const nextConfig = {
   },
   images: {
     dangerouslyAllowSVG: true,
-    domains: ['ghchart.rshah.org', 'github-readme-stats.vercel.app', 'htb.htlab.kr'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.hysj.kr',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.htlab.kr',
+      },
+    ],
+    domains: ['ghchart.rshah.org', 'github-readme-stats.vercel.app'],
   },
 }
 
