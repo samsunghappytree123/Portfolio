@@ -1,0 +1,28 @@
+a.button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: #30363D;
+    border: solid 2px #B1B5B0;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+a.button:hover {
+    color: white;
+    background-color: #B1B5B0;
+    border: solid 2px #B1B5B0;
+    border-radius: 10px;
+}
+
+a.button > p {
+    font-size: 15px;
+    margin-top: 7px;
+}
+
+.buttonLink {
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
