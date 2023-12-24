@@ -386,6 +386,11 @@ th, td {
   margin: 10px;
 }
 
+.tdStandard {
+  text-align: center;
+  margin: 10px;
+}
+
 .noticeDetailContent {
   border: solid 2px #30363D;
   border-radius: 10px;
