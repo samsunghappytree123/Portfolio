@@ -8,6 +8,7 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from "rehype-raw";
 import remarkGfm from 'remark-gfm';
 import NotFound from '../404.js';
+import { start } from 'nprogress'
 export const runtime = 'experimental-edge';
 
 export default function projectsHome({data, title}) {
@@ -24,6 +25,9 @@ export default function projectsHome({data, title}) {
             "guide": {"icon": <FontAwesomeIcon icon={faBookOpen} />, "title": "가이드"},
             "blog": {"icon": <FontAwesomeIcon icon={faBlog} />, "title": "블로그"},
         }
+        var startDate = new Date(data.startDate);
+        var finishDate = new Date(data.finishDate);
+
         return (
             <>
                 <Head>
@@ -52,7 +56,7 @@ export default function projectsHome({data, title}) {
 
                     <div className='repo_page'>
                         <div align="center">
-                            <Image src={data.defaultImage} width="150" height="150" style={{borderRadius: '50%'}} />
+                            <Image src={data.defaultImage} width="150" height="150" style={{borderRadius: '50%'}} alt='프로젝트 로고' />
                             <h1>{data.name}</h1>
                             <p style={{color: '#B1B5B0', marginTop: '-20px'}}>{data.shortDescription}</p>
                             <div className='buttonLink'>
@@ -60,7 +64,23 @@ export default function projectsHome({data, title}) {
                                     <a className='button' target='_blank' key={link.type} href={link.link} title={type[String(link.type)]['title']}><p>{type[String(link.type)]['icon']}</p></a>
                                 ))}
                             </div>
+
+                            <table className='repo_files' style={{width: '300px', marginTop: '-20px', marginBottom: '20px'}}>
+                                <thead>
+                                    <tr>
+                                        <th colSpan={2}><div className='noticeHeader'>프로젝트 간단 정보</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div className='tdStandard'>시작일</div></td>
+                                        <td><div className='tdStandard'>{startDate.getFullYear()}년 {startDate.getMonth()+1}월 {startDate.getDate()}일</div></td>
+                                    </tr>
+                                    {data.finishDate === null ? null : <tr><td><div className='tdStandard'>종료일</div></td><td><div className='tdStandard'>{finishDate.getFullYear()}년 {finishDate.getMonth()+1}월 {finishDate.getDate()}일</div></td></tr>}
+                                </tbody>
+                            </table>
                         </div>
+
                         <div className='noticeDetailContent'>
                             <div className='text'>
                                 <ReactMarkdown
