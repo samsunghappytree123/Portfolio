@@ -22,13 +22,14 @@ export default function repositories() {
                 <div className={styles.list}>
                     <h1 style={{textAlign: 'left'}}><FontAwesomeIcon icon={faList} /> 레포지토리 목록</h1>
                     {Object.keys(data).map(repo => (
-                        <>
+                        <div key={data[repo].name}>
                             <hr />
                             <div className={styles.text}>
                                 <h2><FontAwesomeIcon icon={faBook} /> <Link href={(data[repo].name).toLowerCase()}>{data[repo].name}</Link> <span className='badge'>Public</span></h2>
-                                <p className={styles.repo_text}>{data[repo].description}</p> <p className={styles.repo_rtext}>마지막 업데이트 : {data[repo].writeDay}</p>
+                                <p className={styles.repo_text}>{data[repo].description}</p> {/* <p className={styles.repo_rtext}>마지막 업데이트 : {data[repo].writeDay}</p> */}
+
                             </div>
-                        </>
+                        </div>
                     ))}
                     <hr style={{marginBottom: '30px'}} />
                 </div>

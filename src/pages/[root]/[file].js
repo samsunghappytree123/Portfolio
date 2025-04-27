@@ -49,7 +49,7 @@ export default function ResolveRoute({data, url, title, description, fileData}) 
                                     <div className='table_text'>
                                         <img src='/favicon-192x192.png' alt='logo' width='32px' height='32px' style={{borderRadius: '50%'}}/> <Link href="/">YSJ</Link> <p style={{marginLeft: '10px'}}>{data.commitMessage}</p>
                                     </div>
-                                    <div style={{textAlign: 'right', marginTop: '15px', marginLeft: '8px', marginRight: '8px'}}>{dayCheck(data.writeDay)} 전</div>
+                                    {/* <div style={{textAlign: 'right', marginTop: '15px', marginLeft: '8px', marginRight: '8px'}}>{dayCheck(data.writeDay)} 전</div> */}
                                 </th>
                             </tr>
                         </thead>

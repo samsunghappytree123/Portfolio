@@ -54,29 +54,27 @@ export default function ResolveRoute({data, url, title}) {
                       <div className='table_text'>
                           <img src='/favicon-192x192.png' alt='logo' width='32px' height='32px' style={{borderRadius: '50%'}}/> <Link href="/">YSJ</Link> <p style={{marginLeft: '10px'}}>{data.commitMessage}</p>
                       </div>
-                      <div style={{textAlign: 'right', marginTop: '15px', marginLeft: '8px', marginRight: '8px'}}>{dayCheck(data.writeDay)} 전</div>
+                      {/* <div style={{textAlign: 'right', marginTop: '15px', marginLeft: '8px', marginRight: '8px'}}>{dayCheck(data.writeDay)} 전</div> */}
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {(data.files).map(file =>(
-                    <>
-                      <tr key={file.name} className='file_list_tr'>
-                        <td style={{minWidth: '140px', width: '20%', borderRight: 'none'}}>
-                          <div style={{display: 'block', marginTop: '8px', marginBottom: '8px', marginLeft: '10px'}} className='tableLink'>
-                            <FontAwesomeIcon icon={faFile} style={{marginRight: '10px'}} /><Link href={file.fileUrl}>{file.title}</Link>
-                          </div>
-                        </td>
-                        <td style={{minWidth: '100px', width: '5%', color: '#8B949E', borderLeft: 'none', borderRight: 'none'}}>
-                          {file.commitMessage}
-                        </td>
-                        <td style={{minWidth: '85px', width: '20%', color: '#8B949E', borderLeft: 'none', marginTop: '8px', marginBottom: '8px'}}>
-                          <div style={{textAlign: 'right', marginLeft: '8px', marginRight: '8px'}}>
-                            {dayCheck(file.writeDay)} 전
-                          </div>
-                        </td>
-                      </tr>
-                    </>
+                    <tr key={file.name} className='file_list_tr'>
+                      <td style={{minWidth: '140px', width: '20%', borderRight: 'none'}}>
+                        <div style={{display: 'block', marginTop: '8px', marginBottom: '8px', marginLeft: '10px'}} className='tableLink'>
+                          <FontAwesomeIcon icon={faFile} style={{marginRight: '10px'}} /><Link href={file.fileUrl}>{file.title}</Link>
+                        </div>
+                      </td>
+                      <td style={{minWidth: '100px', width: '5%', color: '#8B949E', borderLeft: 'none', borderRight: 'none'}}>
+                        {file.commitMessage}
+                      </td>
+                      <td style={{minWidth: '85px', width: '20%', color: '#8B949E', borderLeft: 'none', marginTop: '8px', marginBottom: '8px'}}>
+                        {/* <div style={{textAlign: 'right', marginLeft: '8px', marginRight: '8px'}}>
+                          {dayCheck(file.writeDay)} 전
+                        </div> */}
+                      </td>
+                    </tr>
                   ))}
                 </tbody>
               </table>
