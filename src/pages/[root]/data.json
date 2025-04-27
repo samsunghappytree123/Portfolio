@@ -46,5 +46,21 @@
                 "commitMessage": "Contact Me!"
             }
         ]
+    },
+    "ability-and-goal": {
+        "name": "Ability-and-Goal",
+        "description": "🥇 저의 능력과 앞으로의 목표에 대해 작성했습니다!",
+        "writeDay":"2025-04-27 14:00:00",
+        "commitMessage": "Introduce My Ability and Goal",
+        "files": [
+            {
+                "name": "readme.md",
+                "title": "README.md",
+                "fileUrl": "/ability-and-goal/README.md",
+                "content": "",
+                "writeDay":"2025-04-27 14:00:00",
+                "commitMessage": "Introduce My Ability and Goal"
+            }
+        ]
     }
 }
