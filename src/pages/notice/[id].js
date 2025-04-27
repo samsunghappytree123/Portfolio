@@ -78,7 +78,7 @@ export async function getServerSideProps(context) {
   } else {
     const list = await res.json();
     return {
-      props: {data: list['data'], title: `${list['data']['title']} > 공지사항 - Yunseo Jeong`,}
+      props: {data: list['data'], title: `${list['data']['title']} > 공지사항 - Yunseo Jung`,}
     };
   }
 }

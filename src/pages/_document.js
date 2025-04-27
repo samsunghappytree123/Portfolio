@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="ko">
       <Head>
-        <title>Yunseo Jeong</title>
+        <title>Yunseo Jung</title>
 
         <meta name="theme-color" content="#76ff9f" />
         <meta property="og:image" content="/favicon.ico" />

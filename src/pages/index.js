@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>프로필 - Yunseo Jeong</title>
-        <meta name="title" content="프로필 - Yunseo Jeong" />
-        <meta property="og:title" content="프로필 - Yunseo Jeong" />
+        <title>프로필 - Yunseo Jung</title>
+        <meta name="title" content="프로필 - Yunseo Jung" />
+        <meta property="og:title" content="프로필 - Yunseo Jung" />
         <meta name="description" content="안녕하세요, 삼해트입니다." />
         <meta name="og:description" content="안녕하세요, 삼해트입니다." />
       </Head>
@@ -21,7 +21,7 @@ export default function Home() {
           <div className='user_profile_image'>
             <Image src={'/favicon-512x512.png'} alt='logo' width={296} height={296} style={{borderRadius: '50%', marginBottom: '10px'}} />
             <div>
-              <h2>Yunseo Jeong</h2>
+              <h2>Yunseo Jung</h2>
               <p style={{color: '#B1B5B0', marginTop: '-15px'}}>samsunghappytree123</p>
               <p>👋 Hello, World!</p>
               <div className='user_profile_links'>
@@ -37,7 +37,7 @@ export default function Home() {
             <p style={{textAlign: 'left', marginLeft: '20px'}}><code>samsunghappytree123/README.md</code></p>
             <hr />
             <div className='text'>
-              <h1># Yunseo Jeong</h1>
+              <h1># Yunseo Jung</h1>
               <hr style={{marginTop: '-10px', marginBottom: '-10px'}} />
               <h2>😜 안녕하세요, 삼해트입니다.</h2>
               <p>

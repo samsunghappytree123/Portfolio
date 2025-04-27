@@ -9,8 +9,8 @@ export default function NotFound() {
 	return (
 		<>
 			<Head>
-				<title>404 - Yunseo Jeong</title>
-				<meta property="og:title" content="404 - Yunseo Jeong" />
+				<title>404 - Yunseo Jung</title>
+				<meta property="og:title" content="404 - Yunseo Jung" />
 				<meta name="description" content="존재하지 않는 페이지입니다." />
 				<meta name="og:description" content="존재하지 않는 페이지입니다." />
 			</Head>

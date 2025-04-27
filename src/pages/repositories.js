@@ -11,9 +11,9 @@ export default function repositories() {
     return (
         <>
             <Head>
-                <title>레포지토리 목록 - Yunseo Jeong</title>
-                <meta name="title" content="레포지토리 목록 - Yunseo Jeong" />
-                <meta property="og:title" content="레포지토리 목록 - Yunseo Jeong" />
+                <title>레포지토리 목록 - Yunseo Jung</title>
+                <meta name="title" content="레포지토리 목록 - Yunseo Jung" />
+                <meta property="og:title" content="레포지토리 목록 - Yunseo Jung" />
                 <meta name="description" content="전체 레포지토리 목록을 확인해보세요!" />
                 <meta name="og:description" content="전체 레포지토리 목록을 확인해보세요!" />
             </Head>

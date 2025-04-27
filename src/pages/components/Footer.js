@@ -4,8 +4,8 @@ const Footer = () => {
     return (
         <div className='footer'>
             <hr />
-            Yunseo Jeong
-            <p>© 2019-present Yunseo Jeong. All rights reserved.</p>
+            Yunseo Jung
+            <p>© 2019-present Yunseo Jung. All rights reserved.</p>
             <hr style={{marginBottom: '0px'}} />
         </div>
     );

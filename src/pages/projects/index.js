@@ -9,9 +9,9 @@ export default function projectsHome({list, error}) {
     return (
         <>
             <Head>
-                <title>Projects - Yunseo Jeong</title>
-                <meta name="title" content="Projects - Yunseo Jeong" />
-                <meta property="og:title" content="Projects - Yunseo Jeong" />
+                <title>Projects - Yunseo Jung</title>
+                <meta name="title" content="Projects - Yunseo Jung" />
+                <meta property="og:title" content="Projects - Yunseo Jung" />
                 <meta name="description" content="제 프로젝트들을 확인해보세요!" />
                 <meta name="og:description" content="제 프로젝트들을 확인해보세요!" />
             </Head>

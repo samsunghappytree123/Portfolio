@@ -125,7 +125,7 @@ export async function getServerSideProps(context) {
     return {props: {}}
   } else {
     return {
-      props: {data: data[context.params.root], fileData: fileData, url: `/${context.params.root}`, title: `${data[context.params.root]['name']}/${fileData['title']} - Yunseo Jeong`, description: `${data[context.params.root]['name']} 레포지토리의 ${fileData['title']} 파일을 확인해보세요.`}
+      props: {data: data[context.params.root], fileData: fileData, url: `/${context.params.root}`, title: `${data[context.params.root]['name']}/${fileData['title']} - Yunseo Jung`, description: `${data[context.params.root]['name']} 레포지토리의 ${fileData['title']} 파일을 확인해보세요.`}
     };
   }
 }

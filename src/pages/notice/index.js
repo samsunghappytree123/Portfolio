@@ -9,9 +9,9 @@ export default function noticeHome({list}) {
   return (
     <>
       <Head>
-        <title>공지사항 - Yunseo Jeong</title>
-        <meta name="title" content="공지사항 - Yunseo Jeong" />
-        <meta property="og:title" content="공지사항 - Yunseo Jeong" />
+        <title>공지사항 - Yunseo Jung</title>
+        <meta name="title" content="공지사항 - Yunseo Jung" />
+        <meta property="og:title" content="공지사항 - Yunseo Jung" />
         <meta name="description" content="안녕하세요, 삼해트입니다." />
         <meta name="og:description" content="안녕하세요, 삼해트입니다." />
       </Head>

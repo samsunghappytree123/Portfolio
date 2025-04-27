@@ -146,7 +146,7 @@ export async function getServerSideProps(context) {
     return {props: {}}
   } else {
     return {
-      props: {data: data[context.params.root], url: context.params.root, title: `${data[context.params.root]['name']} - Yunseo Jeong`},
+      props: {data: data[context.params.root], url: context.params.root, title: `${data[context.params.root]['name']} - Yunseo Jung`},
     };
   }
 }
