@@ -1683,9 +1683,9 @@ hastscript@^7.0.0:
     space-separated-tokens "^2.0.0"
 
 hono@^4.11.4:
-  version "4.12.18"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.12.18.tgz#f6d301938868c3a8bdb639495f4e326a19181505"
-  integrity sha512-RWzP96k/yv0PQfyXnWjs6zot20TqfpfsNXhOnev8d1InAxubW93L11/oNUc3tQqn2G0bSdAOBpX+2uDFHV7kdQ==
+  version "4.12.32"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.12.32.tgz#9489eb5507c2b90554ee7817a3f97d9b754ee1ff"
+  integrity sha512-XcuyW9qE2kJn07PkecMOBd5Vq/hMy7mmGw+idz1yblbg9N17ijJODrvPkn7/dwL3Kulj8LcRJ69DLOWf91dRUg==
 
 html-void-elements@^2.0.0:
   version "2.0.1"
